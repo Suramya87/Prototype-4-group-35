@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using Project.StateMachine;
 
 public class CharacterSwitcher : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class CharacterSwitcher : MonoBehaviour
     {
         public GameObject character;
         public MonoBehaviour movementScript;
+        public StateMachine stateMachine;
         public Camera camera;
     }
 
@@ -53,5 +55,6 @@ public class CharacterSwitcher : MonoBehaviour
         var data = characters[index];
         if (data.camera != null) data.camera.enabled = active;
         if (data.movementScript != null) data.movementScript.enabled = active;
+        if (data.stateMachine != null) data.stateMachine.enabled = !active;
     }
 }

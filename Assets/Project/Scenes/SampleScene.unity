@@ -410,6 +410,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673b4d6717b92914b82d21821db6a99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!114 &1039012556 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+  m_PrefabInstance: {fileID: 3436840166853301010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5af4e05e0cef349b066161998a2baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurtleFSM
 --- !u!1 &1097628240
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,6 +716,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9154999222612219150, guid: d768247d40d69044b8437a511745129e, type: 3}
     - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
+      propertyPath: characters.Array.data[0].stateMachine
+      value: 
+      objectReference: {fileID: 1039012556}
+    - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
+      propertyPath: characters.Array.data[1].stateMachine
+      value: 
+      objectReference: {fileID: 7667389531161542756}
+    - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
       propertyPath: characters.Array.data[0].movementScript
       value: 
       objectReference: {fileID: 795124200}
@@ -834,6 +853,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d768247d40d69044b8437a511745129e, type: 3}
+--- !u!114 &7667389531161542756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8050689057121047402, guid: d768247d40d69044b8437a511745129e, type: 3}
+  m_PrefabInstance: {fileID: 7667389531161542755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aad7e96155b83b4fbabac80448003d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RabbitFSM
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
