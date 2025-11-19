@@ -5,7 +5,7 @@ namespace Project.StateMachine
 {
 	public class StateMachine : MonoBehaviour
 	{
-		private readonly Dictionary<State, List<(Transition, State)>> _stateTransitions;
+		protected Dictionary<State, List<(Transition, State)>> _stateTransitions;
 		private State _currentState;
 
 		public void SetState(State state)
