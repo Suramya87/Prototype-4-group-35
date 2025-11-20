@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManager;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -6,6 +7,14 @@ public class ButtonManager : MonoBehaviour
 
     public ButtonObject buttonA;
     public ButtonObject buttonB;
+
+    public string sceneToLoad = "win";
+
+    private bool sceneLoaded = false;
+
+    // Track if each button has EVER been pressed at least once
+    private bool aWasPressed = false;
+    private bool bWasPressed = false;
 
     private void Awake()
     {
@@ -16,18 +25,28 @@ public class ButtonManager : MonoBehaviour
     {
         Debug.Log($"{button.name} was pressed.");
 
-        if (buttonA.isPressed && buttonB.isPressed)
+        // Mark whichever button was pressed
+        if (button == buttonA) aWasPressed = true;
+        if (button == buttonB) bWasPressed = true;
+
+        // If both have ever been pressed at least once, load the scene
+        if (aWasPressed && bWasPressed)
         {
-            OnBothButtonsPressed();
+            OnBothButtonsEverPressed();
         }
     }
 
-    void OnBothButtonsPressed()
+    void OnBothButtonsEverPressed()
     {
-        Debug.Log("Both buttons activated!");
+        if (sceneLoaded) return; // avoid double load
+        sceneLoaded = true;
 
-        // ---- PLACE YOUR EVENT HERE ----
-        // Example: open a door
-        // door.Open();
+        Debug.Log("Both buttons have been pressed at least once! Loading scene...");
+
+        // Pause the game
+        Time.timeScale = 0f;
+
+        // Load scene
+        SceneManager.LoadScene(sceneToLoad);
     }
 }

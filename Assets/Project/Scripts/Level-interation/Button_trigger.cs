@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class ButtonTrigger : MonoBehaviour
+public class TriggerDetector : MonoBehaviour
 {
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Ensure tag is Player
-        if (tag != "Player")
-            tag = "Player";
+        Debug.Log("Entered trigger: " + other.name);
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Exited trigger: " + other.name);
     }
 }
