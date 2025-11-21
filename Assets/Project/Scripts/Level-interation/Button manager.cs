@@ -5,41 +5,54 @@ public class ButtonManager : MonoBehaviour
 {
     public static ButtonManager Instance;
 
+    [Header("Buttons")]
     public ButtonObject buttonA;
     public ButtonObject buttonB;
 
-    // The name of the scene to load
+    [Header("Scene Settings")]
     public string sceneToLoad = "win";
 
-    private bool sceneLoaded = false;
+    private bool actionTriggered = false;
 
     private void Awake()
     {
+        // Singleton
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
+
+        // Optional: auto-find buttons by tag if not assigned
+        if (buttonA == null)
+            buttonA = GameObject.FindWithTag("ButtonA")?.GetComponent<ButtonObject>();
+        if (buttonB == null)
+            buttonB = GameObject.FindWithTag("ButtonB")?.GetComponent<ButtonObject>();
     }
 
     public void NotifyButtonPressed(ButtonObject button)
     {
-        Debug.Log($"{button.name} was pressed.");
+        Debug.Log($"Manager: {button.name} pressed. A={buttonA.isPressed}, B={buttonB.isPressed}");
 
-        if (buttonA.isPressed && buttonB.isPressed)
+        if (!actionTriggered && buttonA != null && buttonB != null)
         {
-            OnBothButtonsPressed();
+            if (buttonA.isPressed && buttonB.isPressed)
+            {
+                actionTriggered = true;
+                TriggerSceneChange();
+            }
         }
     }
 
-    void OnBothButtonsPressed()
+    public void NotifyButtonReleased(ButtonObject button)
     {
-        if (sceneLoaded) return; // prevent double-loading
+        // Debug.Log($"Manager: {button.name} released.");
+    }
 
-        Debug.Log("Both buttons activated! Loading new scene...");
-
-        // Pause the game
-        Time.timeScale = 0f;
-
-        sceneLoaded = true;
-
-        // Load the scene
+    private void TriggerSceneChange()
+    {
+        Debug.Log("Both buttons pressed! Changing scene...");
         SceneManager.LoadScene(sceneToLoad);
     }
 }
