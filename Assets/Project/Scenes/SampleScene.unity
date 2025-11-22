@@ -278,6 +278,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &217768837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3392932975261799731, guid: 2e83e91dd1e7a644a917704a7cd415b9, type: 3}
+  m_PrefabInstance: {fileID: 140128373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7106553db95f7449ebf6e7f5adbd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonObject
+--- !u!114 &305692587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7428490374315129855, guid: 90ff5879c83d5654dbea683171831d8b, type: 3}
+  m_PrefabInstance: {fileID: 741375192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7106553db95f7449ebf6e7f5adbd8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonObject
 --- !u!114 &430317038 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8115351823899587187, guid: d768247d40d69044b8437a511745129e, type: 3}
@@ -871,6 +893,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8016574174667551650, guid: 02b8519e1edc7724cb83bfc010ecab70, type: 3}
+      propertyPath: buttonA
+      value: 
+      objectReference: {fileID: 305692587}
+    - target: {fileID: 8016574174667551650, guid: 02b8519e1edc7724cb83bfc010ecab70, type: 3}
+      propertyPath: buttonB
+      value: 
+      objectReference: {fileID: 217768837}
     - target: {fileID: 8523535030058820178, guid: 02b8519e1edc7724cb83bfc010ecab70, type: 3}
       propertyPath: m_Name
       value: Square
