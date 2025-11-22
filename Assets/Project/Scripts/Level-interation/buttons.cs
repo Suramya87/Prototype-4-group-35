@@ -23,7 +23,7 @@ public class ButtonObject : MonoBehaviour
             {
                 objectsOnButton++;
 
-                // Press immediately when first object enters
+            
                 if (!isPressed)
                 {
                     isPressed = true;
@@ -31,9 +31,8 @@ public class ButtonObject : MonoBehaviour
                     // Debug.Log($"{name} pressed by {other.tag}");
                 }
 
-                // Reset release timer because an object is on the button
                 releaseTimer = 0f;
-                break; // stop checking once matched
+                break; 
             }
         }
     }
@@ -46,7 +45,6 @@ public class ButtonObject : MonoBehaviour
             {
                 objectsOnButton--;
 
-                // Start the release timer if no objects remain
                 if (objectsOnButton <= 0)
                 {
                     releaseTimer = pressDurationAfterExit;
@@ -58,7 +56,6 @@ public class ButtonObject : MonoBehaviour
 
     private void Update()
     {
-        // Count down the timer when no objects are on the button
         if (isPressed && objectsOnButton <= 0)
         {
             releaseTimer -= Time.deltaTime;
@@ -67,7 +64,6 @@ public class ButtonObject : MonoBehaviour
             {
                 isPressed = false;
                 ButtonManager.Instance?.NotifyButtonReleased(this);
-                // Debug.Log($"{name} released after timer");
             }
         }
     }

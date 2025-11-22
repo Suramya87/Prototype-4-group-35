@@ -16,7 +16,6 @@ public class ButtonManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -24,7 +23,6 @@ public class ButtonManager : MonoBehaviour
         }
         Instance = this;
 
-        // Optional: auto-find buttons by tag if not assigned
         if (buttonA == null)
             buttonA = GameObject.FindWithTag("ButtonA")?.GetComponent<ButtonObject>();
         if (buttonB == null)
