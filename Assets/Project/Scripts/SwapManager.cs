@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Project.StateMachine;
 
-public class CharacterSwitcher : MonoBehaviour
+public class SwapManager : MonoBehaviour
 {
     [System.Serializable]
     public class CharacterData
