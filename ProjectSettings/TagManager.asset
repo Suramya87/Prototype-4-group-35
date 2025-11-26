@@ -4,8 +4,6 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ButtonA
-  - ButtonB
   - Turtle
   - Rabbit
   layers:
