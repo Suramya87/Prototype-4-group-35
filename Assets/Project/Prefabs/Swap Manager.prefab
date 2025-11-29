@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3214172459333546676}
   - component: {fileID: 212449591080408380}
   m_Layer: 0
-  m_Name: SwapManager
+  m_Name: Swap Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

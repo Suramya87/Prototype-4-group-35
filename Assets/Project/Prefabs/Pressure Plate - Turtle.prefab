@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8120768491128132020}
   - component: {fileID: 7428490374315129855}
   m_Layer: 0
-  m_Name: PressurePlate_Turtle
+  m_Name: Pressure Plate - Turtle
   m_TagString: PressurePlate_Turtle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

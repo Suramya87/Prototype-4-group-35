@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,7 @@ public class ButtonManager : MonoBehaviour
     public ButtonObject buttonB;
 
     [Header("Scene Settings")]
-    public string sceneToLoad = "win";
+    [SerializeField] private SceneAsset sceneToLoad;
 
     private bool actionTriggered = false;
 
@@ -51,6 +52,6 @@ public class ButtonManager : MonoBehaviour
     private void TriggerSceneChange()
     {
         Debug.Log("Both buttons pressed! Changing scene...");
-        SceneManager.LoadScene(sceneToLoad);
+        SceneManager.LoadScene(sceneToLoad.name);
     }
 }
