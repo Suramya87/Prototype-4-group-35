@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
   buttonA: {fileID: 305692587}
   buttonB: {fileID: 217768837}
-  sceneToLoad: win
+  sceneToLoad: WinScreen
 --- !u!4 &46139695
 Transform:
   m_ObjectHideFlags: 0
