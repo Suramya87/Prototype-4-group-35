@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3214172459333546676}
   - component: {fileID: 212449591080408380}
   m_Layer: 0
-  m_Name: Swap_handler
+  m_Name: SwapManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1121679876559286106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.806, y: 1.38711, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca4b01d12c62e64b9b5a01ec5c4fa48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSwitcher
-  characterA: {fileID: 0}
-  characterB: {fileID: 0}
+  characters: []
