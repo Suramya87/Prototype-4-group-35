@@ -353,7 +353,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7667389531161542755}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 673b4d6717b92914b82d21821db6a99a, type: 3}
   m_Name: 
@@ -550,6 +550,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 886297416664809601, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1418976430197503384, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
       propertyPath: m_TagString
       value: tutle
@@ -565,6 +569,10 @@ PrefabInstance:
     - target: {fileID: 4298991374853155839, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
       propertyPath: m_TagString
       value: tutle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605553465497149395, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7045079774020629715, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -732,6 +740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1285191765666627336, guid: d768247d40d69044b8437a511745129e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1768170031334651813, guid: d768247d40d69044b8437a511745129e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -739,6 +751,10 @@ PrefabInstance:
     - target: {fileID: 4217960046304693404, guid: d768247d40d69044b8437a511745129e, type: 3}
       propertyPath: m_TagString
       value: rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8259075788762045847, guid: d768247d40d69044b8437a511745129e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9154999222612219150, guid: d768247d40d69044b8437a511745129e, type: 3}
       propertyPath: m_Name
