@@ -8,9 +8,9 @@ public class SwapManager : MonoBehaviour
     public class CharacterData
     {
         public GameObject character;
+        public SpriteRenderer possessionIndicator;
         public MonoBehaviour movementScript;
         public StateMachine stateMachine;
-        public Camera camera;
     }
 
     public List<CharacterData> characters = new List<CharacterData>();
@@ -53,7 +53,7 @@ public class SwapManager : MonoBehaviour
     void SetCharacterActive(int index, bool active)
     {
         var data = characters[index];
-        if (data.camera != null) data.camera.enabled = active;
+        if (data.movementScript != null) data.possessionIndicator.enabled = active;
         if (data.movementScript != null) data.movementScript.enabled = active;
         if (data.stateMachine != null) data.stateMachine.enabled = !active;
     }
