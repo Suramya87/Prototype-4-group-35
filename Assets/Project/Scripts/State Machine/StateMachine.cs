@@ -34,6 +34,16 @@ namespace Project.StateMachine
 
 			_currentState.OnUpdate();
 		}
-	}
+
+        private void FixedUpdate()
+        {
+            if (_currentState == null)
+            {
+                return;
+            }
+
+            _currentState.OnFixedUpdate();
+        }
+    }
 }
 

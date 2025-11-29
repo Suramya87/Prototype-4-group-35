@@ -1,30 +1,24 @@
 using UnityEngine;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class BasicMovement : MonoBehaviour
 {
-    public float movementSpeed = 10f;
-    // public float rotationSpeed = 200f;
-    private CharacterController controller;
+    private Rigidbody2D _rigidBody2D;
+    private Vector2 _moveDirection2D;
+    [field: SerializeField] public float MoveSpeed { get; private set; } = 10f;
 
-    private Vector3 movement;
-
-    void Start()
+    private void Awake()
     {
-        controller = GetComponent<CharacterController>();
+        _rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void Update()
     {
-        HandleMovement();
+        _moveDirection2D = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
     }
 
-    void HandleMovement()
+    private void FixedUpdate()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-
-        Vector3 move = new Vector3(x, y, 0f).normalized;
-        controller.Move(movementSpeed * Time.deltaTime * move);
+        _rigidBody2D.linearVelocity = _moveDirection2D * MoveSpeed;
     }
 }

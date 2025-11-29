@@ -180,5 +180,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonObject
   allowedTags:
   - tutle
-  pressDurationAfterExit: 1
+  pressDurationAfterExit: 0
   isPressed: 0

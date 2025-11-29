@@ -12,8 +12,9 @@ namespace Project.StateMachine
 		}
 
 		// Since states live as long as the state machine, either OnEnter() or OnExit() need to handle resetting the state
-		public abstract void OnEnter();
-		public abstract void OnExit();
-		public abstract void OnUpdate();
-	}
+		public virtual void OnEnter() { }
+		public virtual void OnExit() { }
+        public virtual void OnUpdate() { }
+        public virtual void OnFixedUpdate() { }
+    }
 }

@@ -180,5 +180,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonObject
   allowedTags:
   - rabbit
-  pressDurationAfterExit: 1
+  pressDurationAfterExit: 0
   isPressed: 0

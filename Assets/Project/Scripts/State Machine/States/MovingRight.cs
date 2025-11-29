@@ -3,20 +3,17 @@ using UnityEngine;
 
 public class MovingRight : State
 {
-	private CharacterController _characterController;
-	private float _moveSpeed;
+    private readonly Rigidbody2D _rigidBody2D;
+    private readonly float _moveSpeed;
 
-	public MovingRight(GameObject owner) : base(owner)
-	{
-		_characterController = owner.GetComponent<CharacterController>();
-		_moveSpeed = owner.GetComponent<BasicMovement>().movementSpeed;
-	}
+    public MovingRight(GameObject owner) : base(owner)
+    {
+        _rigidBody2D = owner.GetComponent<Rigidbody2D>();
+        _moveSpeed = owner.GetComponent<BasicMovement>().MoveSpeed;
+    }
 
-	public override void OnEnter() { }
-	public override void OnExit() { }
-
-	public override void OnUpdate()
-	{
-		_characterController.Move(_moveSpeed * Time.deltaTime * Vector3.right);
-	}
+    public override void OnFixedUpdate()
+    {
+        _rigidBody2D.linearVelocity = _moveSpeed * Vector2.right;
+    }
 }
