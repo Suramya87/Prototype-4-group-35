@@ -19,8 +19,8 @@ public class PressurePlateManager : MonoBehaviour
 		}
 	}
 
-	[SerializeField] private PressurePlate _plate1;
-	[SerializeField] private PressurePlate _plate2;
+	[SerializeField] private PressurePlate _plateA;
+	[SerializeField] private PressurePlate _plateB;
 	[SerializeField] private SceneAsset _sceneToLoad;
 
 	private void Awake()
@@ -30,7 +30,7 @@ public class PressurePlateManager : MonoBehaviour
 
 	public void OnPlatePressed()
 	{
-		if (_plate1.IsPressed && _plate2.IsPressed)
+		if (_plateA.IsPressed && _plateB.IsPressed)
 		{
 			SceneManager.LoadScene(_sceneToLoad.name);
 		}

@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class MovingUp : State
 {
-	private readonly Rigidbody2D _rigidBody2D;
-	private readonly float _moveSpeed;
+	private CharacterController _characterController;
+	private float _moveSpeed;
 
 	public MovingUp(GameObject owner) : base(owner)
 	{
-		_rigidBody2D = owner.GetComponent<Rigidbody2D>();
-		_moveSpeed = owner.GetComponent<PlayerMovementController>().moveSpeed;
+		_characterController = owner.GetComponent<CharacterController>();
+		_moveSpeed = owner.GetComponent<BasicMovement>().movementSpeed;
 	}
 
 	public override void OnEnter() { }
@@ -17,6 +17,6 @@ public class MovingUp : State
 
 	public override void OnUpdate()
 	{
-		_rigidBody2D.linearVelocity = _moveSpeed * Vector2.up; // create OnFixedUpdate() later
+		_characterController.Move(_moveSpeed * Time.deltaTime * Vector3.up);
 	}
 }

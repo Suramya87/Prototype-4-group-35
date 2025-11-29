@@ -15,16 +15,18 @@ public class PressurePlate : MonoBehaviour
         _allowedTagsSet = new(_allowedTags);
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (_allowedTagsSet.Contains(collision.tag))
-		{
-			_numValidAnimalsOnPlate++;
-			PressurePlateManager.Instance.OnPlatePressed();
-		}
-	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Yo");
+        if (_allowedTagsSet.Contains(collision.tag))
+        {
+            Debug.Log("Pressed");
+            _numValidAnimalsOnPlate++;
+            PressurePlateManager.Instance.OnPlatePressed();
+        }
+    }
 
-	private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
 		if (_allowedTagsSet.Contains(collision.tag))
 		{
