@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ButtonA
-  - ButtonB
-  - Turtle
-  - Rabbit
+  - tutle
+  - rabbit
   layers:
   - Default
   - TransparentFX
@@ -44,12 +42,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3652139735
-    locked: 0
-  - name: Sprites
-    uniqueID: 2134932245
     locked: 0
   m_RenderingLayers:
   - Default
