@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4267595231859041819, guid: 2e83e91dd1e7a644a917704a7cd415b9, type: 3}
       propertyPath: m_Name
-      value: B
+      value: PressurePlate_Rabbit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5576484727874420259, guid: 90ff5879c83d5654dbea683171831d8b, type: 3}
       propertyPath: m_Name
-      value: A
+      value: PressurePlate_Turtle
       objectReference: {fileID: 0}
     - target: {fileID: 7428490374315129855, guid: 90ff5879c83d5654dbea683171831d8b, type: 3}
       propertyPath: allowedTags.Array.size

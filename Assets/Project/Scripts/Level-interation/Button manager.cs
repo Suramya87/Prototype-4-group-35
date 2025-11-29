@@ -24,9 +24,9 @@ public class ButtonManager : MonoBehaviour
         Instance = this;
 
         if (buttonA == null)
-            buttonA = GameObject.FindWithTag("ButtonA")?.GetComponent<ButtonObject>();
+            buttonA = GameObject.FindWithTag("PressurePlate_Rabbit")?.GetComponent<ButtonObject>();
         if (buttonB == null)
-            buttonB = GameObject.FindWithTag("ButtonB")?.GetComponent<ButtonObject>();
+            buttonB = GameObject.FindWithTag("PressurePlate_Turtle")?.GetComponent<ButtonObject>();
     }
 
     public void NotifyButtonPressed(ButtonObject button)

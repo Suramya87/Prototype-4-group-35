@@ -6,6 +6,8 @@ TagManager:
   tags:
   - tutle
   - rabbit
+  - PressurePlate_Turtle
+  - PressurePlate_Rabbit
   layers:
   - Default
   - TransparentFX
