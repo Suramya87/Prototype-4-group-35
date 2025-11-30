@@ -306,7 +306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 7667389531161542755}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617232574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 673b4d6717b92914b82d21821db6a99a, type: 3}
   m_Name: 
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3436840166853301010}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462945216}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b5af4e05e0cef349b066161998a2baa, type: 3}
   m_Name: 
@@ -831,6 +831,14 @@ PrefabInstance:
       propertyPath: characters.Array.data[1].movementScript
       value: 
       objectReference: {fileID: 430317038}
+    - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
+      propertyPath: characters.Array.data[0].stateMachineScript
+      value: 
+      objectReference: {fileID: 1039012556}
+    - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
+      propertyPath: characters.Array.data[1].stateMachineScript
+      value: 
+      objectReference: {fileID: 7667389531161542756}
     - target: {fileID: 212449591080408380, guid: 6cec5504b11248443ad69643707f8973, type: 3}
       propertyPath: characters.Array.data[0].possessionIndicator
       value: 

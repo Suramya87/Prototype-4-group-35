@@ -12,13 +12,13 @@ public class CollidingWithWallInDirection : Transition
 
         var circleCollider2D = owner.GetComponent<CircleCollider2D>();
 		Vector2 circleCollider2DOffsetScaled2D = circleCollider2D.offset * owner.transform.localScale.x;
-		float circleCollider2DRadiusScaled = circleCollider2D.radius * owner.transform.localScale.x;
+		float circleCollider2DRadiusScaled = (circleCollider2D.radius + 0.1f) * owner.transform.localScale.x;
 		_raycastOffsetFromTransform2D = circleCollider2DOffsetScaled2D + (collisionDirection2D * circleCollider2DRadiusScaled);
 	}
 
 	public override bool CanTransition()
 	{
-		Vector3 origin = (Vector2)_owner.transform.position + _raycastOffsetFromTransform2D;
+		Vector2 origin = (Vector2)_owner.transform.position + _raycastOffsetFromTransform2D;
 		RaycastHit2D hit = Physics2D.Raycast(origin, _collisionDirection2D, 0.1f);
 		return hit && hit.collider.CompareTag("Wall");
     }
