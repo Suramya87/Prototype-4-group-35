@@ -1548,6 +1548,10 @@ PrefabInstance:
       propertyPath: buttonB
       value: 
       objectReference: {fileID: 733988752}
+    - target: {fileID: 1333920757404474530, guid: 8d647208821f77b49ba6f04836e5b254, type: 3}
+      propertyPath: sceneToLoad
+      value: 
+      objectReference: {fileID: 102900000, guid: 2eb26009b1e71134f9b34b02e3dc17ed, type: 3}
     - target: {fileID: 6864483449338106750, guid: 8d647208821f77b49ba6f04836e5b254, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.31665
