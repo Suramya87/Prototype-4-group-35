@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 735289785989566702}
   m_Layer: 0
   m_Name: tutle
-  m_TagString: Player
+  m_TagString: tutle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4298991374853155839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b5af4e05e0cef349b066161998a2baa, type: 3}
   m_Name: 

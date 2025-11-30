@@ -9,12 +9,25 @@ public class SwapManager : MonoBehaviour
     {
         public GameObject character;
         public SpriteRenderer possessionIndicator;
-        public MonoBehaviour movementScript;
+        public BasicMovement movementScript;
         public StateMachine stateMachine;
     }
 
     public List<CharacterData> characters = new List<CharacterData>();
     private int currentIndex = 0;
+
+    private void OnValidate()
+    {
+        foreach (var characterData in characters)
+        {
+            if (characterData.character != null)
+            {
+                characterData.possessionIndicator = characterData.character.transform.GetChild(0).GetComponent<SpriteRenderer>();
+                characterData.movementScript = characterData.character.GetComponent<BasicMovement>();
+                characterData.stateMachine = characterData.character.GetComponent<StateMachine>();
+            }
+        }
+    }
 
     void Start()
     {
