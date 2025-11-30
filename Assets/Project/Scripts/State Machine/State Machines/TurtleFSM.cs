@@ -1,14 +1,15 @@
+using UnityEngine;
 using Project.StateMachine;
 
 public class TurtleFSM : StateMachine
 {
 	private void Awake()
 	{
-		State movingUp = new MovingUp(gameObject);
-		State movingDown = new MovingDown(gameObject);
+		State movingUp = new MovingInDirection(gameObject, Vector2.up);
+		State movingDown = new MovingInDirection(gameObject, Vector2.down);
 
-		Transition tooFarUp = new TooFarUp(gameObject);
-		Transition tooFarDown = new TooFarDown(gameObject);
+		Transition collidingWithWallUp = new CollidingWithWallInDirection(gameObject, Vector2.up);
+		Transition collidingWithWallDown = new CollidingWithWallInDirection(gameObject, Vector2.down);
 
 		_stateTransitions = new()
 		{
@@ -16,14 +17,14 @@ public class TurtleFSM : StateMachine
 				movingUp,
 				new()
 				{
-					(tooFarUp, movingDown)
+					(collidingWithWallUp, movingDown)
 				}
 			},
 			{
 				movingDown,
 				new()
 				{
-					(tooFarDown, movingUp)
+					(collidingWithWallDown, movingUp)
 				}
 			}
 		};

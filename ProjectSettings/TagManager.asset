@@ -8,6 +8,7 @@ TagManager:
   - rabbit
   - PressurePlate_Turtle
   - PressurePlate_Rabbit
+  - Wall
   layers:
   - Default
   - TransparentFX

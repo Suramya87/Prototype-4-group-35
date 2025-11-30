@@ -4,7 +4,7 @@ namespace Project.StateMachine
 {
 	public abstract class State
 	{
-		protected GameObject _owner;
+		protected GameObject _owner { get; private set; }
 
 		public State(GameObject owner)
 		{

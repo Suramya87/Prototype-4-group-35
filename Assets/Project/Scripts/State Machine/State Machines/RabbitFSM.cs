@@ -1,14 +1,15 @@
+using UnityEngine;
 using Project.StateMachine;
 
 public class RabbitFSM : StateMachine
 {
 	private void Awake()
 	{
-		State movingLeft = new MovingLeft(gameObject);
-		State movingRight = new MovingRight(gameObject);
+		State movingLeft = new MovingInDirection(gameObject, Vector2.left);
+		State movingRight = new MovingInDirection(gameObject, Vector2.right);
 
-		Transition tooFarLeft = new TooFarLeft(gameObject);
-		Transition tooFarRight = new TooFarRight(gameObject);
+		Transition collidingWithWallLeft = new CollidingWithWallInDirection(gameObject, Vector2.left);
+		Transition collidingWithWallRight = new CollidingWithWallInDirection(gameObject, Vector2.right);
 
 		_stateTransitions = new()
 		{
@@ -16,14 +17,14 @@ public class RabbitFSM : StateMachine
 				movingLeft,
 				new()
 				{
-					(tooFarLeft, movingRight)
+					(collidingWithWallLeft, movingRight)
 				}
 			},
 			{
 				movingRight,
 				new()
 				{
-					(tooFarRight, movingLeft)
+					(collidingWithWallRight, movingLeft)
 				}
 			}
 		};
