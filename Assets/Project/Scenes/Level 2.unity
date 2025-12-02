@@ -146,6 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 673b4d6717b92914b82d21821db6a99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!4 &151612635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 924446026329288418, guid: d768247d40d69044b8437a511745129e, type: 3}
+  m_PrefabInstance: {fileID: 1258331527}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &414464846
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,6 +962,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8050689057121047402, guid: d768247d40d69044b8437a511745129e, type: 3}
+      propertyPath: kickKey
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8050689057121047402, guid: d768247d40d69044b8437a511745129e, type: 3}
+      propertyPath: kickOrigin
+      value: 
+      objectReference: {fileID: 151612635}
     - target: {fileID: 9154999222612219150, guid: d768247d40d69044b8437a511745129e, type: 3}
       propertyPath: m_Name
       value: rabbit
@@ -983,6 +996,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+      propertyPath: shellKey
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+      propertyPath: toggleKey
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
+      propertyPath: shellSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eea187f34f42c1d4fb25b80120172c69, type: 3}
     - target: {fileID: 4298991374853155839, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
       propertyPath: m_Name
       value: tutle

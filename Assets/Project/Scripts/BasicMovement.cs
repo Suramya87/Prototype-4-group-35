@@ -3,22 +3,32 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BasicMovement : MonoBehaviour
 {
-    private Rigidbody2D _rigidBody2D;
-    private Vector2 _moveDirection2D;
+    private Rigidbody2D rb;
+    private Vector2 moveDirection;
     [field: SerializeField] public float MoveSpeed { get; private set; } = 10f;
+
+    private TurtleFSM turtleFSM;
 
     private void Awake()
     {
-        _rigidBody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        turtleFSM = GetComponent<TurtleFSM>();
     }
 
     private void Update()
     {
-        _moveDirection2D = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+        moveDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
     }
 
     private void FixedUpdate()
     {
-        _rigidBody2D.linearVelocity = _moveDirection2D * MoveSpeed;
+        // Prevent player from moving the turtle if shelled
+        if (turtleFSM != null && turtleFSM.IsShelled()) 
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
+        rb.linearVelocity = moveDirection * MoveSpeed;
     }
 }
