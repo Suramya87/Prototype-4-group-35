@@ -1190,6 +1190,10 @@ PrefabInstance:
       propertyPath: buttonB
       value: 
       objectReference: {fileID: 733988752}
+    - target: {fileID: 1333920757404474530, guid: 8d647208821f77b49ba6f04836e5b254, type: 3}
+      propertyPath: _sceneToLoadName
+      value: Win Screen
+      objectReference: {fileID: 0}
     - target: {fileID: 6864483449338106750, guid: 8d647208821f77b49ba6f04836e5b254, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.31665
