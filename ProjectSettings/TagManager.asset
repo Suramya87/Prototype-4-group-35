@@ -9,6 +9,7 @@ TagManager:
   - PressurePlate_Turtle
   - PressurePlate_Rabbit
   - Wall
+  - Breakable
   layers:
   - Default
   - TransparentFX

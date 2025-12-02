@@ -1,34 +1,37 @@
 using UnityEngine;
-using Project.StateMachine;
 
-public class RabbitFSM : StateMachine
+[RequireComponent(typeof(Rigidbody2D))]
+public class RabbitFSM : MonoBehaviour
 {
-	private void Awake()
-	{
-		State movingLeft = new MovingInDirection(gameObject, Vector2.left);
-		State movingRight = new MovingInDirection(gameObject, Vector2.right);
+    [Header("Movement Settings")]
+    [SerializeField] private float moveSpeed = 2f;
 
-		Transition collidingWithWallLeft = new CollidingWithWallInDirection(gameObject, Vector2.left);
-		Transition collidingWithWallRight = new CollidingWithWallInDirection(gameObject, Vector2.right);
+    private Rigidbody2D rb;
+    private Vector2 moveDirection = Vector2.right;
 
-		_stateTransitions = new()
-		{
-			{
-				movingLeft,
-				new()
-				{
-					(collidingWithWallLeft, movingRight)
-				}
-			},
-			{
-				movingRight,
-				new()
-				{
-					(collidingWithWallRight, movingLeft)
-				}
-			}
-		};
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Dynamic; // always dynamic for collisions
+    }
 
-		SetState(movingLeft);
-	}
+    private void OnEnable()
+    {
+        // Ensure AI starts moving when enabled
+        rb.linearVelocity = moveDirection * moveSpeed;
+    }
+
+    private void FixedUpdate()
+    {
+        // Only move via AI when this script is enabled
+        if (!enabled) return;
+
+        rb.linearVelocity = moveDirection * moveSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Reverse direction when hitting walls
+        moveDirection = -moveDirection;
+    }
 }
