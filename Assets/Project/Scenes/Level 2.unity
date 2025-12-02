@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cracked Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 6778369625038894981, guid: 92f290468834fce479fb4361fe65b82b, type: 3}
+      propertyPath: m_TagString
+      value: Breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 7713801924289091005, guid: 92f290468834fce479fb4361fe65b82b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9
@@ -480,7 +484,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6778369625038894981, guid: 92f290468834fce479fb4361fe65b82b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1448503035}
   m_SourcePrefab: {fileID: 100100000, guid: 92f290468834fce479fb4361fe65b82b, type: 3}
 --- !u!1001 &675502180
 PrefabInstance:
@@ -1277,6 +1284,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7713801924289091005, guid: cd3c54b23b2b7794fa9fb38f8db84df5, type: 3}
   m_PrefabInstance: {fileID: 1446449734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1448503032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6778369625038894981, guid: 92f290468834fce479fb4361fe65b82b, type: 3}
+  m_PrefabInstance: {fileID: 659431055}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1448503035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448503032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5099d438db6b5d4383685194973a30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BreakableObject
+  maxHealth: 10
 --- !u!1001 &1453378651
 PrefabInstance:
   m_ObjectHideFlags: 0
