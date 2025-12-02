@@ -1007,14 +1007,6 @@ PrefabInstance:
       propertyPath: shellKey
       value: 32
       objectReference: {fileID: 0}
-    - target: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
-      propertyPath: toggleKey
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 735289785989566702, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
-      propertyPath: shellSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: eea187f34f42c1d4fb25b80120172c69, type: 3}
     - target: {fileID: 4298991374853155839, guid: 83b2b4d3b6ea70549a1e4491f974b075, type: 3}
       propertyPath: m_Name
       value: tutle

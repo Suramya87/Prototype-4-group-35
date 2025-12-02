@@ -183,6 +183,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5af4e05e0cef349b066161998a2baa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TurtleFSM
+  moveSpeed: 5
+  shellSprite: {fileID: 21300000, guid: 94621df2029914e4eabc436e9fbb4f6d, type: 3}
+  toggleKey: 32
+  damageOnCollision: 5
 --- !u!1 &5256763653527377343
 GameObject:
   m_ObjectHideFlags: 0
